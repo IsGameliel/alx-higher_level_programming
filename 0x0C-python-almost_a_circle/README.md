@@ -32,6 +32,15 @@ Test case for ```square.py```.
 
 ## *Resources*
 
-* [Args and Kwargs in Python](https://alx-intranet.hbtn.io/rltoken/7gc6UzxSL81HcuAwklUbuQ)
+* [Args and Kwargs in Python](https://intranet.alxswe.com/rltoken/7gc6UzxSL81HcuAwklUbuQ)
 * [unittest module](https://alx-intranet.hbtn.io/rltoken/soictNXCPE18ASL3INoeew)
 * [Python Documentation](https://docs.python.org/)
+* [Python test cheatsheet](https://intranet.alxswe.com/rltoken/uI9iskBCcNo5pc7j9Vy86A)
+* [Unitest module](https://intranet.alxswe.com/rltoken/soictNXCPE18ASL3INoeew)
+
+## Author
+ibiso eugene
+- [Github](https://github.com/IsGameliel)
+- [facebook](https://www.facebook.com/Simvic226/)
+- [twitter](https://mobile.twitter.com/ibiso_eugene)
+- [Linkedin](https://www.linkedin.com/in/ibiso-eugene-466a93154/)
