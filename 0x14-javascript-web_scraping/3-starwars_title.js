@@ -1,16 +1,34 @@
 #!/usr/bin/node
-const request = require('request');
-const id = process.argv[2];
-const url = 'http://swapi.co/api/films/' + id;
+const axios = require('axios');
 
-function printTitle (url) {
-  request(url, function (error, response, body) {
-    if (error) {
-      console.log(error);
-    } else {
-      let jsonDict = JSON.parse(body);
-      console.log(jsonDict.title);
-    }
-  });
+function getMovieTitle(movieId) {
+  const url = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
+  return axios
+    .get(url)
+    .then(response => {
+      return response.data.title;
+    })
+    .catch(error => {
+      console.error(`Error retrieving movie data: ${error}`);
+      return null;
+    });
 }
-printTitle(url);
+
+if (process.argv.length < 3) {
+  console.log('Please provide the movie ID as an argument.');
+  process.exit(1);
+}
+
+const movieId = process.argv[2];
+
+getMovieTitle(movieId)
+  .then(movieTitle => {
+    if (movieTitle) {
+      console.log(`The title of Episode ${movieId} is: ${movieTitle}`);
+    } else {
+      console.log(`No movie found with Episode ${movieId}.`);
+    }
+  })
+  .catch(error => {
+    console.error(`Error retrieving movie title: ${error}`);
+  });
